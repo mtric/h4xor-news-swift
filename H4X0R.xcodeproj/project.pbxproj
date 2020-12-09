@@ -11,6 +11,10 @@
 		1A08D67B256BE439007462DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08D67A256BE439007462DA /* ContentView.swift */; };
 		1A08D67D256BE43C007462DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A08D67C256BE43C007462DA /* Assets.xcassets */; };
 		1A08D680256BE43C007462DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A08D67F256BE43C007462DA /* Preview Assets.xcassets */; };
+		1A08D68A256BE6B0007462DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08D689256BE6B0007462DA /* NetworkManager.swift */; };
+		1A08D68D256BE7DB007462DA /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08D68C256BE7DB007462DA /* PostData.swift */; };
+		1A08D69B256BF773007462DA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08D69A256BF773007462DA /* DetailView.swift */; };
+		1A08D69E256BFA59007462DA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08D69D256BFA59007462DA /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		1A08D67C256BE43C007462DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A08D67F256BE43C007462DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A08D681256BE43C007462DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A08D689256BE6B0007462DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1A08D68C256BE7DB007462DA /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		1A08D69A256BF773007462DA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1A08D69D256BFA59007462DA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1A08D6A0256BFC20007462DA /* H4X0R.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = H4X0R.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +61,10 @@
 		1A08D677256BE439007462DA /* H4X0R */ = {
 			isa = PBXGroup;
 			children = (
+				1A08D6A0256BFC20007462DA /* H4X0R.entitlements */,
 				1A08D678256BE439007462DA /* H4X0RApp.swift */,
-				1A08D67A256BE439007462DA /* ContentView.swift */,
+				1A08D68F256BF6DE007462DA /* Views */,
+				1A08D688256BE69C007462DA /* Models */,
 				1A08D67C256BE43C007462DA /* Assets.xcassets */,
 				1A08D681256BE43C007462DA /* Info.plist */,
 				1A08D67E256BE43C007462DA /* Preview Content */,
@@ -67,6 +78,25 @@
 				1A08D67F256BE43C007462DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A08D688256BE69C007462DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A08D689256BE6B0007462DA /* NetworkManager.swift */,
+				1A08D68C256BE7DB007462DA /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A08D68F256BF6DE007462DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A08D67A256BE439007462DA /* ContentView.swift */,
+				1A08D69A256BF773007462DA /* DetailView.swift */,
+				1A08D69D256BFA59007462DA /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A08D68A256BE6B0007462DA /* NetworkManager.swift in Sources */,
+				1A08D68D256BE7DB007462DA /* PostData.swift in Sources */,
 				1A08D67B256BE439007462DA /* ContentView.swift in Sources */,
+				1A08D69E256BFA59007462DA /* WebView.swift in Sources */,
+				1A08D69B256BF773007462DA /* DetailView.swift in Sources */,
 				1A08D679256BE439007462DA /* H4X0RApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4X0R/H4X0R.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R/Preview Content\"";
 				DEVELOPMENT_TEAM = R255VAFXU8;
@@ -279,6 +314,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ericwalter.H4X0R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4X0R/H4X0R.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R/Preview Content\"";
 				DEVELOPMENT_TEAM = R255VAFXU8;
@@ -301,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ericwalter.H4X0R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
